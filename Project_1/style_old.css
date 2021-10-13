@@ -1,0 +1,254 @@
+a:hover{
+	background-color:purple;
+	color:white;
+	font-size: 150%;
+}
+a:link{
+	text-decoration:none;
+}
+
+.page_header{
+    color:red;
+    display:grid;
+    grid-template-rows: 2rem 2rem 500;
+}
+.banner_section{
+    align-items: flex-start;
+    color:green;
+    display:grid;
+    grid-template-columns: 50% 50%;    
+    justify-content: space-between;
+
+}
+.banner_buttons{
+    align-items:stretch;
+	color:purple;
+    display:flex;    
+    justify-content:space-around;
+    list-style-type: none;
+    margin:1rem;
+    padding : 2rem;
+}
+.banner_title{
+	align-items: flex-start;
+    display:grid;
+    grid-template-columns: 1fr 3fr;    
+    justify-content: space-between;
+}
+.company_name{	
+	color:orange;	
+	font-size: 5rem;	
+}
+
+.product_buttons{   
+	color:white;
+    display:flex;
+    justify-content: space-around;  
+	list-style-type:none;
+}
+
+.product_buttons>button{   
+	
+	text-align:center;
+	text-decoration:none;
+	display:block;
+	font-size:1.5rem;
+	height: 1.8rem;
+	width:18%;
+}
+
+body{
+	display: grid;
+        grid-template-areas:
+          "pageHeader pageHeader pageHeader"
+          "navbar navbar navbar"
+          "hero hero hero"
+          "products products quotes"
+          "pageFooter pageFooter pageFooter";
+        grid-template-rows: 100px 66px 150px 1fr 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 3px;
+        grid-column-gap: 3px;
+        height: 100vh;
+        margin: 3px;
+}
+.footer_class{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: blue;
+	color: white;
+	text-align: center;
+	font-size:.75rem;
+	
+}
+
+.footer_class>img{
+	 width: 50px;
+	 height:60px;
+	
+}
+.home_page{
+	color:purple;
+	display: grid;
+	grid-template-columns : 2fr 1fr;	
+	justify-content: space-around;	
+}
+
+.home_page>article {	
+	align-items:center;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	margin : 3px;
+	padding:3px;
+}
+
+.home_page > article:nth-child(1){
+	text-align:center;
+}
+
+.home_page > article:nth-child(2){
+	text-align:left;
+	grid-row: span 2;
+	color:green;
+}
+img.hero_image{
+	max-width:200px;
+}
+
+.products_page{
+	color:orange;
+	display: grid;
+	grid-template-columns : 1fr 1fr 1fr;	
+	justify-content: space-around;
+	
+}
+
+.products_page>article {	
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	margin : 3px;
+	padding:3px;
+	
+}
+
+.products_page > article:nth-child(1){
+	align-items:right;
+	grid-column: span 3;
+	color:green;
+	
+}
+article.product_layout{
+	align-content:center;
+	align-items:center;
+	color: black;
+	display:grid;
+	grid-template-columns: 1fr;
+	justify-content:center;	
+}
+.product_image_layout{
+	align:items:center;
+	display:flex;
+	justify-content:center;
+}
+.product_title{
+	align-content:center;
+	align-items:center;
+	color:red;
+	justify-content:center;
+	text-align:center;	
+}
+.product_description{
+	color:blue;
+	font-weight:  100;
+	text-align:left;
+}
+.product_price{
+	color:blue;
+	text-align:right;
+}
+.product_image{
+	align-content:center;
+	align-items:center;
+	justify-content:center;
+	max-width:30%;
+}
+
+.abount_page{
+	color:orange;
+	display: grid;
+	grid-template-columns : 1fr ;	
+	justify-content: space-around;
+}
+
+.about_page>article {	
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	display:flex;
+	flex-direction :row;
+	margin : 3px;
+	padding:3px;
+}
+
+.contact_us_page{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin : 5px;
+	padding:3px;
+}
+
+.contact_us_page>article {	
+	text-align:center;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	
+}
+
+.contact_us_page >img{
+	border_radius: 8px;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	display:block;
+	padding-top:10px;
+	margin-left: auto;
+	margin-right: auto;	
+	max-width:350px;
+}
+
+.contact_us_page > article:nth-child(1){
+	align-items:center;
+	grid-column: span 3;
+	color:green;
+	
+}
+.email_form_section{
+	text-align:right;
+	grid-column: span 2;	
+	
+}
+/* New Style Area */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+
+  html {
+	background-color: #001357;
+	font-size: 1.1em;
+	line-height: 1.4;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  
+  page_header,
+  footer_class,
+  article,
+  nav,
+  section,
+  aside,
+  div {
+	padding: 3px;
+	margin: 3px;
+	background-color: wheat;
+  }

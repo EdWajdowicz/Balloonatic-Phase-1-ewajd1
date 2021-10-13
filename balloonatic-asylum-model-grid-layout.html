@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <!-- Sample CSS Grid home page layout for Balloonatic Asylum exercise. -->
+  <!-- Dr. Ted Markowitz (tmarkowitz@newhaven.edu) 09/28/21 -->
+  <head>
+    <title>"The Balloonatic Asylum" Example Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background-color: #001357;
+        font-size: 1.1em;
+        line-height: 1.4;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        display: grid;
+        grid-template-areas:
+          "pageHeader pageHeader pageHeader"
+          "navbar navbar navbar"
+          "hero hero hero"
+          "products products quotes"
+          "pageFooter pageFooter pageFooter";
+        grid-template-rows: 100px 66px 150px 1fr 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 3px;
+        grid-column-gap: 3px;
+        height: 100vh;
+        margin: 3px;
+      }
+
+      header,
+      footer,
+      article,
+      nav,
+      section,
+      aside,
+      div {
+        padding: 3px;
+        margin: 3px;
+        background-color: wheat;
+      }
+
+      #pageHeader {
+        grid-area: pageHeader;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      #mainNav {
+        grid-area: navbar;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      #hero {
+        grid-area: hero;
+        display: flex;
+        flex-direction: row;
+      }
+
+      #mainSection {
+        grid-area: products;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .sectionTitle {
+        font-weight: bold;
+        text-align: center;
+      }
+
+      #mainAside {
+        grid-area: quotes;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      #pageFooter {
+        grid-area: pageFooter;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .product {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 5px 5px 5px darkred;
+      }
+
+      .quote {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        font-style: italic;
+        box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+          5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+
+      .quote::before {
+        content: "<<";
+      }
+
+      .quote::after {
+        content: ">>";
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="pageHeader">Page Header</header>
+    <nav id="mainNav">Main Navigation Bar</nav>
+    <section id="hero">Hero Picture</section>
+    <section id="mainSection">
+      <p class="sectionTitle">Product Offers</p>
+      <article class="product">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+        repellendus suscipit praesentium dolore dolores! Explicabo,
+        perspiciatis. Voluptate sapiente asperiores modi? Veritatis error
+        voluptatibus dolorum suscipit!
+      </article>
+      <article class="product">Product 2</article>
+      <article class="product">Product 3</article>
+      <article class="product">Product 4</article>
+      <article class="product">Product 5</article>
+    </section>
+    <aside id="mainAside">
+      <p class="sectionTitle">Customer Tributes</p>
+      <article class="quote">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+        asperiores exercitationem, necessitatibus atque officiis accusantium?
+      </article>
+      <article class="quote">Quote 2</article>
+      <article class="quote">Quote 3</article>
+      <article class="quote">Quote 4</article>
+    </aside>
+    <footer id="pageFooter">Page Footer</footer>
+  </body>
+</html>
